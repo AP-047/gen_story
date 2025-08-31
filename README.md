@@ -14,12 +14,12 @@ A Python and Streamlit application that generates four-chapter noir detective st
 ## Installation
 
 1. Clone the repository  
- https://github.com/ap-047/gen_story.git
+   https://github.com/AP-047/gen_story.git
 
-2. Install dependencies
+3. Install dependencies
    pip install -r requirements.txt
 
-3. Run the code
+4. Run the code
    streamlit run app.py
 
 ## Usage
