@@ -4,11 +4,11 @@ A Python and Streamlit application that generates four-chapter noir detective st
 
 ## Features
 
-- AI-generated detective stories in clear, simple language
+- AI-generated short detective stories.
 - Four-chapter structure: Discovery, First Leads, Breakthrough, Resolution
 - Predefined static images per chapter
-- Audio narration via Google TTS or pre-generated files
-- Two background music tracks: `Hidden Truth.mp3` and `Mysterious Lights.mp3`
+- Audio narration via Google TTS
+- Two background music tracks
 - Modular code structure for easy extension
 
 ## Installation
