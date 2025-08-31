@@ -32,7 +32,7 @@ A Python and Streamlit application that generates four-chapter noir detective st
 
 
 ## Work in Progress
-This project is under active development. Future improvements include:
+This project is under development. Future improvements include:
 - More voice styles and faster TTS
 - Additional visual themes
 - Branching story paths and user choices
