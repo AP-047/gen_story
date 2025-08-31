@@ -1,4 +1,4 @@
-# 🕵🏻 AI-Powered Noir Detective Stories
+# 🕵🏻 AI-Powered Detective Story Generator
 
 A Python and Streamlit application that generates four-chapter noir detective stories using GPT-2, with matching audio narration and background music.
 
