@@ -23,7 +23,7 @@ def get_image_loader():
     return ImageLoader()
 
 def main():
-    st.title("Short Detective Stories")
+    st.title("🕵🏻 Short Detective Stories")
 
     if 'profile' not in st.session_state:
         st.session_state.profile = None
