@@ -17,10 +17,10 @@ A Python and Streamlit application that generates four-chapter noir detective st
    https://github.com/AP-047/gen_story.git
 
 3. Install dependencies
-   - pip install -r requirements.txt
+   <br> pip install -r requirements.txt
 
-4. Run the code
-   - streamlit run app.py
+5. Run the code
+   <br> streamlit run app.py
 
 ## Usage
 1. Enter your detective’s name, investigation style, atmosphere, and music choice.
