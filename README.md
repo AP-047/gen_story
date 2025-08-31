@@ -24,7 +24,7 @@ A Python and Streamlit application that generates four-chapter noir detective st
 
 ## Usage
 1. Enter your detective’s name, investigation style, atmosphere, and music choice.
-2. <img src="./assets/images/detective_profile.png" alt="detective_profile" width="600" height="200">
+2. <img src="./assets/images/detective_profile.png">
 3. Click “Create My Story Experience.”
 4. Read each chapter, view its image, and listen to the narration and music.
 
