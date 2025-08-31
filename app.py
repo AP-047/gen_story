@@ -1,32 +1,29 @@
-# app.py
-
 import os
 import streamlit as st
-from models.story_generator import NoirStoryGenerator
-from media_generators.audio_narrator import NoirNarrator
-from media_generators.background_music import NoirMusicPlayer
-from media_generators.image_generator import NoirImageLoader
+from models.story_generator import StoryGenerator
+from media_generators.audio_narrator import Narrator
+from media_generators.background_music import MusicPlayer
+from media_generators.image_generator import ImageLoader
 
-# Cache singletons
+# cache singletons
 @st.cache_resource
 def get_story_generator():
-    return NoirStoryGenerator()
+    return StoryGenerator()
 
 @st.cache_resource
 def get_narrator():
-    return NoirNarrator()
+    return Narrator()
 
 @st.cache_resource
 def get_music_player():
-    return NoirMusicPlayer()
+    return MusicPlayer()
 
 @st.cache_resource
 def get_image_loader():
-    return NoirImageLoader()
+    return ImageLoader()
 
 def main():
-    st.title("🕵️ Easy Noir Detective Stories")
-    st.markdown("*Simple language, matching audio, and background music*")
+    st.title("Short Detective Stories")
 
     if 'profile' not in st.session_state:
         st.session_state.profile = None
@@ -41,7 +38,7 @@ def main():
         show_story()
 
 def show_quiz():
-    st.header("🎭 Create Your Detective Profile")
+    st.header("Create Your Detective Profile")
     with st.form("form"):
         name = st.text_input("Detective's name", "Detective Morgan")
         style = st.selectbox("Investigation approach", [
@@ -87,13 +84,13 @@ def show_story():
 
 def generate_story():
     progress = st.progress(0)
-    st.info("📝 Generating story...")
+    st.info("Generating story...")
     sg = get_story_generator()
     chapters = sg.generate_chapters(st.session_state.profile)
     st.session_state.chapters = chapters
     progress.progress(30)
 
-    st.info("🎙️ Generating narration...")
+    st.info("Generating narration...")
     nr = get_narrator()
     audios = []
     for i,(_,text) in enumerate(chapters, start=1):
@@ -102,12 +99,12 @@ def generate_story():
     st.session_state.audio_files = audios
     progress.progress(60)
 
-    st.info("🎵 Starting music...")
+    st.info("Starting music...")
     mp = get_music_player()
     mp.change_theme(st.session_state.profile['music_choice'])
     mp.play(volume=0.2)
     progress.progress(100)
-    st.success("✅ Story ready!")
+    st.success("Story ready!")
 
 def display_story():
     il = get_image_loader()

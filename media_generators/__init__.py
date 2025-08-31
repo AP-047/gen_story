@@ -1,8 +1,6 @@
-# media_generators/__init__.py
+# expose only the loader & players that to use
+from .image_generator import ImageLoader
+from .audio_narrator import Narrator
+from .background_music import MusicPlayer
 
-# Expose only the loader and players we use
-from .image_generator import NoirImageLoader
-from .audio_narrator import NoirNarrator
-from .background_music import NoirMusicPlayer
-
-__all__ = ['NoirImageLoader', 'NoirNarrator', 'NoirMusicPlayer']
+__all__ = ['ImageLoader', 'Narrator', 'MusicPlayer']
